@@ -60,15 +60,17 @@ $maxwidth: 1170;
 	bottom: 0;
 	}
 	.menu__icon._active span{
-	transform: scale(0) translate(0, 0);
+		transform: scale(0) translate(0, 0);
 	}
 	.menu__icon._active::before{
-	top: 50%;
-	transform: rotate(-45deg) translate(0, -50%);
+		top: 50%;
+		transform: rotate(-45deg) translate(0, -50%);
+		background-color: white;
 	}
 	.menu__icon._active::after{
-	bottom: 50%;
-	transform: rotate(45deg) translate(0, 50%);
+		bottom: 50%;
+		transform: rotate(45deg) translate(0, 50%);
+		background-color: white;
 	}
 }
 //Search==
@@ -224,3 +226,12 @@ $maxwidth: 1170;
 	margin: 0 0 0 40px;
 }
 }
+//============================================
+//Работа с классами
+.header-menu__block._active{
+	background-color: #F42758;
+	height: 70px;
+	color: white;
+}
+
+
