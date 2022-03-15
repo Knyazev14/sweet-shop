@@ -1,0 +1,220 @@
+//Подключение обнуляющих стилей
+@import "_nullstyle.scss";
+//Подключение миксинов
+@import "_mixins.scss";
+//Подключаем шрифты
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&display=swap');
+//Переменные
+$maxwidth: 1170;
+//==========================================================================
+//Header
+.header {
+}
+.col-lg-2, .col-lg-3, .col-md-2, .col-md-3{
+	padding: 0;
+}
+.header-row {
+	display: flex;
+	align-items: center;
+	height: 70px;
+}
+//Иконка бургера
+.header-menu {
+		&__block {
+			padding: 9px 18px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid #F42758;
+			width: 123px;
+			border-radius: 5px;
+		}
+		&__text {
+			margin-left: 10px;
+			font-size: 18px;
+			font-family: 'Montserrat Alternates', sans-serif;
+		}
+}
+//burger===
+.menu__icon{
+display: block;
+width: 19px;
+height: 12px;
+position: relative;
+cursor: pointer;
+transition: all 0.8s ease 0;
+}
+.menu__icon span,
+.menu__icon::before,
+.menu__icon::after{
+content: "";
+width: 100%;
+height: 16%;
+position: absolute;
+background-color: #F42758;
+}
+.menu__icon span{
+top: 50%;
+transform: scale(1) translate(0, -50%);
+color: #F42758;
+}
+.menu__icon::before{
+top:0;
+}
+.menu__icon::after{
+bottom: 0;
+}
+.menu__icon._active span{
+transform: scale(0) translate(0, 0);
+}
+.menu__icon._active::before{
+top: 50%;
+transform: rotate(-45deg) translate(0, -50%);
+}
+.menu__icon._active::after{
+bottom: 50%;
+transform: rotate(45deg) translate(0, 50%);
+}
+//Header-search====
+.header-search {
+		&__form {
+			height: 38px;
+			border-radius: 5px;
+			border: 1px solid #F42758;
+			padding: 0 20px;
+			display: flex;
+			align-items: center;
+			width: 267px;
+		}
+		&__txt {
+			flex: 1 1 auto;
+		}
+		&__btn {
+			background-color: transparent;
+		}
+		.header-search__txt::placeholder{
+			color: #f427577c;
+			font-size: 14px;
+		}
+}
+//Header-center(инст, логотип, вк)
+.header-center {
+}
+.header-center-block {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+		&__inst {
+			background: url('../img/svg/inst.svg');
+			width: 38px;
+			height: 38px;
+		}
+		&__logo {
+			background: url('../img/svg/logo.svg');
+			width: 91px;
+			height: 60px;
+		}
+		&__vk {
+			background: url('../img/svg/vk.svg');
+			width: 38px;
+			height: 38px;
+			
+		}
+}
+//Header-contacts
+.header-contacts {
+	display: flex;
+	justify-content: flex-end;
+}
+.header-contacts-block {
+	display: flex;
+	align-items: center;
+	height: 38px;
+	border: 1px solid #F42758;
+	border-radius: 7px;
+	padding: 0 13px;
+	width: 261px;
+		&__arrow {
+			margin: 0 10px 0;
+		}
+		&__text {
+			font-size: 18px;
+			font-family: 'Montserrat Alternates', sans-serif;
+		}
+}
+//Header-block-item====
+
+.header-item {
+}
+.header-block-item {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+
+		&__profile {
+			background: url('../img/svg/profile.svg');
+			width: 38px;
+			height: 38px;
+			margin: 0 30px 0 0;
+			background-size: cover;
+		}
+		&__cart {
+			background: url('../img/svg/cart.svg');
+			width: 38px;
+			height: 38px;
+		}
+}
+
+
+//Адаптивность=================================================================
+//Шапка
+@media (max-width: 1199px){
+	.header-search__form{
+		width: 240px;
+	}
+	.header-center-block{
+		justify-content: center;
+	}
+}
+@media(max-width: 991px){
+	//Menu=====
+	.header-menu {
+		&__block {
+			padding: 0;
+			width: 38px;
+			height: 38px;
+			border-radius: 7px;
+		}
+		&__text {
+			display: none;
+		}
+}
+//Search===
+.header-search {
+	&__form {
+		height: 38px;
+		border-radius: 7px;
+		padding: 0;
+		width: 38px;
+		justify-content: center;
+		margin: 0 0 0 5px;
+	}
+	&__txt {
+		display: none;
+	}
+	&__btn {
+	}
+}
+}
+@media (max-width: 767px){
+	.header-search {
+		&__form {
+			margin: 0;
+		}
+	}
+	.header-block-item {
+			&__profile {
+				margin: 0 15px 0 0;
+			}
+	}
+}
