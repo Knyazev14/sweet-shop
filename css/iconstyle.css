@@ -28,11 +28,10 @@
 .icon-search:before {
   content: "\e900";
   color: #F42758;
-  font-size: 18px;
+  font-size: 14px;
 }
-@media(max-width: 991px){
+@media (min-width: 1200px){
 	.icon-search:before {
-		content: "\e900";
-		font-size: 14px;
+		font-size: 18px;
 	}
 }
