@@ -1,0 +1,166 @@
+//Подключение обнуляющих стилей
+@import "_nullstyle.scss";
+//Подключение миксинов
+@import "_mixins.scss";
+//Подключаем шрифты
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Montserrat+Alternates:wght@400;500;600;700&display=swap');
+//Переменные
+$maxwidth: 1170;
+.wrapper{
+	min-width: 100%;
+	overflow: hidden;
+}
+//Mobile-first==========================================================================
+//Header==
+.header-main-row{
+	height: 70px;
+	display: flex;
+	align-items: center;
+}
+//Меню шапки==
+.header-menu {
+	&__block {
+		padding: 0;
+		width: 38px;
+		height: 38px;
+		border-radius: 7px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid #F42758;
+	}
+		&__text {
+			margin-left: 10px;
+			font-size: 18px;
+			font-family: 'Montserrat Alternates', sans-serif;
+	}
+//burger===
+.menu__icon{
+	display: block;
+	width: 19px;
+	height: 12px;
+	position: relative;
+	cursor: pointer;
+	transition: all 0.8s ease 0;
+	}
+	.menu__icon span,
+	.menu__icon::before,
+	.menu__icon::after{
+	content: "";
+	width: 100%;
+	height: 16%;
+	position: absolute;
+	background-color: #F42758;
+	}
+	.menu__icon span{
+	top: 50%;
+	transform: scale(1) translate(0, -50%);
+	color: #F42758;
+	}
+	.menu__icon::before{
+	top:0;
+	}
+	.menu__icon::after{
+	bottom: 0;
+	}
+	.menu__icon._active span{
+		transform: scale(0) translate(0, 0);
+	}
+	.menu__icon._active::before{
+		top: 50%;
+		transform: rotate(-45deg) translate(0, -50%);
+	}
+	.menu__icon._active::after{
+		bottom: 50%;
+		transform: rotate(45deg) translate(0, 50%);
+	}
+}
+//Search==
+.header-search {
+	display: flex;
+	justify-content: center;
+	&__form {
+		height: 38px;
+		border-radius: 7px;
+		padding: 11px;
+		width: 38px;
+		justify-content: center;
+		border: 1px solid rgba(255, 64, 110, 0.5);
+	}
+	&__txt {
+		display: none;
+	}
+	&__btn {
+		background-color: transparent;
+	}
+	.header-search__txt::placeholder{
+		color: #f427577c;
+		font-size: 14px;
+	}
+}
+//Header-center(инст, логотип, вк)
+.header-center {
+	display: flex;
+	justify-content: center;
+}
+.header-center-block {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+		&__inst {
+			width: 38px;
+			height: 38px;
+		}
+		&__logo {
+			background: url('../img/svg/logo.svg');
+			width: 91px;
+			height: 60px;
+		}
+		&__vk {
+			width: 38px;
+			height: 38px;
+		}
+}
+//Header-contacts
+.header-contacts {
+	display: flex;
+	justify-content: flex-end;
+}
+.header-contacts-block {
+	display: flex;
+	align-items: center;
+	height: 38px;
+	border: 1px solid #F42758;
+	border-radius: 7px;
+	padding: 0 10px;
+	width: 261px;
+		&__arrow {
+			margin: 0 10px 0;
+		}
+		&__text {
+			font-size: 14px;
+			font-family: 'Montserrat Alternates', sans-serif;
+		}
+}
+//Profile==
+.header-profile {
+	display: flex;
+	justify-content: center;
+		&__item {
+			
+		}
+}
+//Cart===
+.header-cart {
+	display: flex;
+	justify-content: end;
+		&__item {
+		}
+}
+//Подключаем адаптив
+@import "_media.scss";
+//Подключение стилей main
+@import "_main.scss";
+
+
+
