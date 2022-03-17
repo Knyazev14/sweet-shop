@@ -76,3 +76,60 @@
 		font-size: 25px;
 	} 
 }
+//Main-catalog============================================================
+.row-main-catalog {
+		&__tools {
+			height: 40px;
+			position: relative;
+		}
+
+		&__text {
+
+		}
+
+		&__link {
+		
+		}
+
+}
+.row-main-catalog__link::before{
+	content: url('../img/svg/arrow.svg');
+	display: inline-block;
+	transform: rotate(-90deg);
+	position: absolute;
+	right: 0;
+	top: -5px;
+}
+
+@media(min-width: 992px){
+	.row-main-catalog__link::before{
+		display: none;
+		
+	}
+	.row-main-catalog__title{
+		display: none;
+	}
+	.row-main-catalog__link{
+			background-color: green;
+			width: 40px;
+			height: 20px;
+			display: block;
+		}
+		.block{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			
+		}
+		.row-main-catalog{
+			background: url('../img/svg/cake.svg') 50% no-repeat;
+			background-size: conain;
+			min-height: 564px;
+			border-radius: 7px;
+		}
+		.col-sm-4{
+			padding: 0;
+			border-left: 1px solid white;
+			border-bottom: 1px solid white;
+		}
+}
