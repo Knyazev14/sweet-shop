@@ -1,5 +1,8 @@
 .main {
 }
+a:focus, a:hover {
+	text-decoration: none;
+}
 .row-main-banner {
 	background: #FFE2DC;
 }
@@ -33,6 +36,7 @@
 	height: 410px;
 	padding: 0 15px;
 }
+
 //Main=========================================
 //Banner
 @media (min-width: 500px){
@@ -43,7 +47,7 @@
 		text-align: center;
 	} 
 }
-@media (min-width: 767px){
+@media (min-width: 768px){
 	.main-banner-block {
 		height: 458px;
 		background: url('../img/svg/bg.svg') right no-repeat;
@@ -66,7 +70,12 @@
 		height: 460px;
 		padding: 0;
 	}
-}	
+}
+@media (min-width: 992px){
+	.row-main-banner {
+		margin: 0 0 88px 0;
+	}
+}
 @media (min-width: 1200px){
 	.main-banner-block__title{
 		font-size: 50px;
@@ -77,59 +86,164 @@
 	} 
 }
 //Main-catalog============================================================
-.row-main-catalog {
-		&__tools {
-			height: 40px;
-			position: relative;
+.main-row-catalog {
+}
+.custom-container {
+}
+.main-catalog {
+
+		&__title {
+			padding: 60px 0 20px 15px;
 		}
-
-		&__text {
-
+		&__title span{
+			font-size: 25px;
+			font-weight: 700;
+		}
+		&__menu {
 		}
 
 		&__link {
-		
+			border-top: 1px solid #E1B3F6;
+			padding-top:14px;
+			padding-bottom:14px;
+			&:last-child{
+				border-bottom: 1px solid #E1B3F6;
+			}	
 		}
-
-}
-.row-main-catalog__link::before{
-	content: url('../img/svg/arrow.svg');
-	display: inline-block;
-	transform: rotate(-90deg);
-	position: absolute;
-	right: 0;
-	top: -5px;
-}
-
-@media(min-width: 992px){
-	.row-main-catalog__link::before{
-		display: none;
-		
-	}
-	.row-main-catalog__title{
-		display: none;
-	}
-	.row-main-catalog__link{
-			background-color: green;
-			width: 40px;
-			height: 20px;
-			display: block;
-		}
-		.block{
+		&__link a{
 			display: flex;
-			flex-direction: column;
+			justify-content: space-between;
 			align-items: center;
-			
-		}
-		.row-main-catalog{
-			background: url('../img/svg/cake.svg') 50% no-repeat;
-			background-size: conain;
-			min-height: 564px;
-			border-radius: 7px;
-		}
-		.col-sm-4{
 			padding: 0;
-			border-left: 1px solid white;
-			border-bottom: 1px solid white;
+			font-size: 18px;
+			font-weight: 500;
+			color: black;
+			font-family: 'Montserrat Alternates', sans-serif;
 		}
+		&__link img{
+			display: inline-block;
+			width: 23px;
+			height: 23px;
+			transform: rotate(-90deg);
+		}
+}
+
+@media (min-width: 768px){
+	.main-row-catalog {
+	}
+	.custom-container {
+	}
+	.main-catalog {
+	
+			&__title {
+				padding: 60px 0 20px 15px;
+			}
+			&__title span{
+				font-size: 25px;
+				font-weight: 700;
+				
+			}
+			&__menu {
+			}
+	
+			&__link {
+				border-top: 1px solid #E1B3F6;
+				border-right: 1px solid #E1B3F6;
+				padding-top: 14px;
+				padding-bottom: 14px;
+				&:last-child{
+					border-bottom: 1px solid #E1B3F6;
+					border-right: none;
+				}
+			}
+			&__link a{	
+				font-size: 16px;
+				height: 20px;
+			}
+			&__link img{
+			
+			}
+	}
+}
+@media(min-width: 992px){
+	.main-row-catalog {
+	}
+	.custom-container {
+		max-width: 970px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+	.col.md-4{
+		padding: 0;
+	}
+	.main-catalog {
+		margin: 0;
+			&__title {
+				padding: 60px 0 20px 0px;
+			}
+			&__title span{
+			}
+			&__menu {
+				margin: 0;
+				background: url('../img/svg/cake.svg') 50% no-repeat;
+				border-radius: 15px;
+				height: 564px;
+			}
+			&__link {
+				border-top: 3px solid white;
+				border-right: 3px solid white;
+				padding: 0;
+				&:last-child{
+					border-bottom: 3px solid white;
+					border-right: none;
+				}
+			}
+			&__link a{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-direction: column;
+				flex: 1 1 auto;
+				padding: 0;
+				font-size: 18px;
+				font-weight: 500;
+				color: white;
+				text-align: center;
+				height: 282px;
+				padding: 0 0 54px 0;
+			}
+			&__link span{
+				display: inline-block;
+				font-size: 20px;
+				padding: 70px 0 0 0;
+				display: flex;
+				flex: 1 1 auto;
+				line-height: 140%;
+			}
+			&__link p{
+				display: inline-block;
+				border: 1px solid white;
+				font-size: 20px;
+				font-weight: 500;
+				padding: 16px 41px;
+				border-radius: 7px;
+				margin: 0;
+			}
+	}
+	.main-catalog__link p:hover{
+		background-color: #F42758;
+		border: 1px solid #F42758;
+	}
+}
+@media (min-width: 1200px){
+	.custom-container{
+		max-width: 1170px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+	.main-catalog__link span{
+		font-size: 25px;
+		padding-left: 18px;
+		padding-right: 18px;
+	}
 }

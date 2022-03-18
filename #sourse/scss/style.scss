@@ -10,6 +10,9 @@ $maxwidth: 1170;
 	min-width: 100%;
 	overflow: hidden;
 }
+body{
+	font-family: 'Montserrat Alternates', sans-serif;
+}
 //Mobile-first==========================================================================
 //Header==
 .header-main-row{
@@ -163,4 +166,7 @@ $maxwidth: 1170;
 @import "_main.scss";
 
 
-
+.swiper {
+  width: 600px;
+  height: 300px;
+}
