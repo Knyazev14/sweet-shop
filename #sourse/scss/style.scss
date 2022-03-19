@@ -165,8 +165,4 @@ body{
 //Подключение стилей main
 @import "_main.scss";
 
-
-.swiper {
-  width: 600px;
-  height: 300px;
-}
+@import "_first-slider.scss";

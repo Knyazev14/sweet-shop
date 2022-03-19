@@ -85,10 +85,17 @@ a:focus, a:hover {
 		font-size: 25px;
 	} 
 }
+.text{
+	margin: 0 0 50px 0;
+}
 //Main-catalog============================================================
 .main-row-catalog {
+	margin:  0 0 50px 0;
 }
-.custom-container {
+.custom {
+	padding: 0;
+	margin: 0 auto;
+	min-width: 768px;
 }
 .main-catalog {
 
@@ -133,6 +140,11 @@ a:focus, a:hover {
 	}
 	.custom-container {
 	}
+	.custom {
+		padding: 0;
+		margin: 0 auto;
+		width: 100%;
+	}
 	.main-catalog {
 	
 			&__title {
@@ -151,9 +163,13 @@ a:focus, a:hover {
 				border-right: 1px solid #E1B3F6;
 				padding-top: 14px;
 				padding-bottom: 14px;
+				
 				&:last-child{
 					border-bottom: 1px solid #E1B3F6;
 					border-right: none;
+				}
+				&:nth-child(5){
+					border-bottom: 1px solid #E1B3F6;
 				}
 			}
 			&__link a{	
@@ -168,11 +184,12 @@ a:focus, a:hover {
 @media(min-width: 992px){
 	.main-row-catalog {
 	}
-	.custom-container {
+	.custom {
 		max-width: 970px;
 		margin: 0 auto;
 		padding: 0 15px;
 	}
+	
 	.col.md-4{
 		padding: 0;
 	}
@@ -196,6 +213,9 @@ a:focus, a:hover {
 				&:last-child{
 					border-bottom: 3px solid white;
 					border-right: none;
+				}
+				&:nth-child(5){
+					border-bottom: none;
 				}
 			}
 			&__link a{
@@ -236,7 +256,7 @@ a:focus, a:hover {
 	}
 }
 @media (min-width: 1200px){
-	.custom-container{
+	.custom{
 		max-width: 1170px;
 		margin: 0 auto;
 		padding: 0 15px;
