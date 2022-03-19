@@ -175,3 +175,14 @@
 	content: url('../img/svg/rob.svg');
 	display: inline-block;
 }
+.swiper-button-prev.swiper-button-disabled {
+	opacity: .35;
+	cursor: auto;
+	pointer-events: all;
+}
+
+.swiper-button-next.swiper-button-disabled {
+	opacity: .35;
+	cursor: auto;
+	pointer-events: all;
+}
