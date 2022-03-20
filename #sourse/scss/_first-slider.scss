@@ -168,7 +168,14 @@
 .block-slider {
 }
 .second-slider {
+	display: flex;
+	justify-content: center;
+}
+	
+	
 
+.second-slider {
+	margin:  0 auto;
 	&__text {
 		font-family: 'Montserrat Alternates', sans-serif;
 		font-size: 18px;
@@ -188,6 +195,7 @@
 	}
 
 	&__block {
+		margin: 0 0 20px 0;
 	}
 
 	&__item {
@@ -205,5 +213,140 @@
 		font-family: 'Montserrat Alternates', sans-serif;
 		font-size: 15px;
 		line-height: 140%;
+	}
+}
+
+
+
+//rating========================================\
+.rating__item{
+	flex: 0 0 20%;
+	height: 100%;
+	opacity: 0;
+}
+.form__item {
+	flex: 0 0 20%;
+	height: 100%;
+	
+}
+.form__label {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	margin: 0 0 10px 0;
+}
+.rating {
+	display: flex;
+	font-size: 17px;
+	line-height: 0.75;
+	
+
+}
+.rating__body {
+	position: relative;
+	
+}
+.rating__body::before{
+	content: "★★★★★";
+	display: block;
+	color: rgb(241, 231, 231);
+	font-size: 26px;
+}
+.rating__active {
+	position: absolute;
+	width: 0%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+
+	
+}
+.rating__active::before {
+	content: "★★★★★";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	color: #FDCE06;
+	font-size: 26px;
+}
+.rating__items {
+	display: flex;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	
+}
+.rating__value {
+	margin: 0 10px 0 10px;
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-weight: 700;
+	font-size: 17px;
+}
+.rating__value::after{
+	content: ' /  5';
+	font-weight: 500;
+	
+}
+.rating-block-item{
+	display: flex;
+	align-items: center;
+	margin: 0 0 28px 0;
+}
+.google{
+	border-left: 2px solid #BEBEBE;
+	font-size: 25px;
+	font-weight: 700;
+	padding-left: 10px;
+}
+
+//Slider, rating адаптив===========
+@media (min-width: 321px){
+	.block-slider {
+	}
+	.second-slider {
+		display: flex;
+		justify-content: center;
+	}
+		
+		
+	
+	.second-slider {
+		
+		&__text {
+			display: flex;
+			justify-content: center;
+		}
+	}
+	.main-rating {
+	
+		&__title {
+			display: flex;
+			justify-content: center;
+		}
+	
+		&__block {
+		}
+	
+		&__item {
+			display: flex;
+			align-items: center;
+			margin-bottom: 15px;
+			&:last-child{
+				margin: 0;
+			}
+	
+		}
+		&__item span{
+			display: inline-block;
+			margin-left: 15px;
+			font-family: 'Montserrat Alternates', sans-serif;
+			font-size: 15px;
+			line-height: 140%;
+		}
 	}
 }
