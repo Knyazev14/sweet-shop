@@ -930,4 +930,49 @@ a:focus, a:hover {
   cursor: auto;
   pointer-events: all;
 }
+
+.main-gallery__title {
+  font-family: 'Comfortaa';
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.second-slider__text {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 18px;
+  line-height: 140%;
+  margin: 20px 0 15px 0;
+}
+
+.main-rating__title {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 140%;
+  padding-right: 100px;
+  margin: 0 0 20px 0;
+}
+
+.main-rating__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.main-rating__item:last-child {
+  margin: 0;
+}
+
+.main-rating__item span {
+  display: inline-block;
+  margin-left: 15px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 15px;
+  line-height: 140%;
+}
 /*# sourceMappingURL=style.css.map */
