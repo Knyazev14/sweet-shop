@@ -239,7 +239,7 @@
 	display: flex;
 	font-size: 17px;
 	line-height: 0.75;
-	
+	margin-bottom: 138px;
 
 }
 .rating__body {
@@ -282,15 +282,16 @@
 	
 }
 .rating__value {
-	margin: 0 10px 0 10px;
+	padding: 0 10px 0 10px;
 	font-family: 'Montserrat Alternates', sans-serif;
 	font-weight: 700;
 	font-size: 17px;
+	display: inline-block;
+	min-width: 65px;
 }
 .rating__value::after{
 	content: ' /  5';
 	font-weight: 500;
-	
 }
 .rating-block-item{
 	display: flex;
@@ -302,6 +303,7 @@
 	font-size: 25px;
 	font-weight: 700;
 	padding-left: 10px;
+	
 }
 
 //Slider, rating адаптив===========
@@ -349,4 +351,119 @@
 			line-height: 140%;
 		}
 	}
+}
+
+//About us=======================================
+.main-about-us {
+	min-height: 836px;
+	background: #f2d5ff80;
+	margin-bottom: 60px;
+	&__image {
+		display: inline-block;
+		transform: translate(0 , -20%);
+
+	}
+	&__image img{
+		width: 100%;
+	}
+
+	&__title {
+		font-family: 'Comfortaa';
+		font-weight: 700;
+		font-size: 25px;
+		padding: 20px 0 7px 0;
+		transform: translate(0 , -100%);
+	}
+
+	&__text {
+		font-size: 15px;
+		margin-bottom: 10px;
+		line-height: 140%;
+		transform: translate(0 , -80%);
+	}
+
+	&__list {
+		line-height: 140%;
+		font-size: 15px;
+		transform: translate(0 , -30%);
+	}
+
+	&__list-title {
+		padding: 0 0 10px 0;
+	}
+
+	&__sub-text {
+		line-height: 140%;
+		transform: translate(0 , -30%);
+	}
+}
+
+.about-us-link {
+
+}
+.about-us-link::before {
+	content: '•';
+	display: inline-block;
+	transform: translate(-150%, 0);
+}
+
+
+//Why us================================
+.main-why {
+}
+.why-block{
+	
+}
+
+.why-title {
+	font-family: 'Comfortaa';
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 120%;
+	margin-bottom: 20px;
+}
+
+.why-one {
+	margin-bottom: 15px;
+}
+.why-one img{
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.why-one-image {
+}
+.why-one-text {	
+font-family: 'Montserrat Alternates';
+font-size: 15px;
+line-height: 140%;
+color: #000000;
+}
+
+//Бренды===============================================
+.main-brand {
+	margin-top: 120px;
+}
+
+.brand-title {
+	font-family: 'Comfortaa';
+	font-weight: 700;
+	font-size: 35px;
+	line-height: 120%;
+	margin-bottom: 44px;
+
+}
+.brand-block {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 70px;
+}
+.brand-block img{
+	max-width: 30%;
+}
+
+//footer
+.footer{
+	background: #FAD4CB;
 }
